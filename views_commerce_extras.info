@@ -1,0 +1,12 @@
+name = Views Commerce Extras
+package = Commerce
+description = Commerce views SKU reference and validator
+core = 7.x
+version = "7.x-0.1"
+
+dependencies[] = views
+dependencies[] = commerce
+dependencies[] = commerce_product
+
+files[] = views/commerce_reference_product_sku_argument.inc
+files[] = views/commerce_reference_product_sku_validate.inc
