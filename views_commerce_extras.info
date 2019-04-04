@@ -7,6 +7,8 @@ version = "7.x-0.1"
 dependencies[] = views
 dependencies[] = commerce
 dependencies[] = commerce_product
+dependencies[] = entity
 
 files[] = views/commerce_reference_product_sku_argument.inc
+files[] = views/commerce_reference_product_sku_tid_argument.inc
 files[] = views/commerce_reference_product_sku_validate.inc

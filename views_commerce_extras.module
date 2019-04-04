@@ -11,9 +11,16 @@ function views_commerce_extras_views_plugins() {
 
   // Product ID from SKU argument
   $plugins['argument default']['product_id'] = array(
-    'title' => t('Commerce Product SKU'),
+    'title' => t('Commerce Product ID from SKU'),
     'help' => t('Returns the Product ID referenced from SKU in URL.'),
     'handler' => 'commerce_reference_product_sku_argument',
+  );
+
+  // Product taxonomy IDs from SKU
+  $plugins['argument default']['product_tid'] = array(
+    'title' => t('Commerce Product TIDs from SKU'),
+    'help' => t('Returns the Product TIDs referenced from SKU in URL.'),
+    'handler' => 'commerce_reference_product_sku_tid_argument',
   );
 
   // SKU validator
