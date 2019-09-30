@@ -58,7 +58,14 @@ class commerce_reference_product_sku_tid_argument extends views_plugin_argument_
 
     foreach ($tfs as $tf) {
       foreach ($wrapper->{$tf}->getIterator() as $delta => $term_wrapper) {
-        $tids[] = $term_wrapper->value()->tid;
+	if (!is_object($term_wrapper))
+		continue;
+
+	$value=$term_wrapper->value();
+	if (!is_object($value))
+		continue;
+
+        $tids[] = $value->tid;
       }
     }
 
